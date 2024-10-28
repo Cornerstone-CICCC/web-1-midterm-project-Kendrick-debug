@@ -4,6 +4,8 @@
     --background-color: #eeeff1;
     --font-family: 'Poppins'
 }
+ 
+
 
 * {
     margin: 0;
@@ -31,7 +33,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding: 35px 12%;
     background: rgba(0, 0, 0, 0.658);
     backdrop-filter: blur(10px);
@@ -168,7 +170,7 @@ span{
 
 .image-box img{
     border-radius: 50%;
-    width: 600px;
+    width: 100%;
     border: 3px solid black;
     box-shadow:0 0 50px black;
     flex: 1;
@@ -237,10 +239,56 @@ span{
 }
 
 
-@media (min-width: 600px) {
-    body {
+@media (max-width: 600px) {
+    .home {
         margin: 0;
+        flex-direction: column;
     }
+    .container{
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .container .flex-box-1 {
+        width: 100vw;
+    }
+    .container .flex-box-2 {
+        width: 100vw;
+    }
+    .container .flex-box-3 {
+        width: 100vw;
+    }
+
+    .home {
+        margin: 0;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .Experience {
+        align-items: center;
+    }
+
+    .image-box{
+        width: 300px;
+    }
+
+    .Experience div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        width: 300px;
+    }
+
 }
 
 
@@ -317,6 +365,14 @@ span{
     list-style-type: none;
 }
 
+.skill-image-2 > img + ul{
+    list-style-type: none;
+}
+
+.skill-image-3 > img + ul{
+    list-style-type: none;
+}
+
 .Experience h2 {
     text-align: center;
     font-family: var(--font-family);
@@ -328,7 +384,9 @@ span{
 
 .Experience {
     background-color: black;
-    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 } 
 
 .Experience div {
